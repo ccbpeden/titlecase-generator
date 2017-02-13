@@ -16,5 +16,19 @@
             //Assert
             $this->assertEquals("Beowulf", $result);
         }
+
+        function test_Titlecase_multipleWords()
+        {
+            //Arange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+
+            $input = "the little mermaid";
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("The Little Mermaid", $result);
+        }
     }
 ?>
